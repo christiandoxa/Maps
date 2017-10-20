@@ -26,25 +26,25 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnMap"
+                android:id="@+id/btnSeattle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Map" />
+                android:text="SEATTLE" />
 
             <Button
-                android:id="@+id/btnSatellite"
+                android:id="@+id/btnDublin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Satellite" />
+                android:text="TOKYO" />
 
             <Button
-                android:id="@+id/btnHybrid"
+                android:id="@+id/btnJombang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hybrid" />
+                android:text="JOMBANG" />
 
         </LinearLayout>
 
