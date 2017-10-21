@@ -1,5 +1,6 @@
 package com.adroitdevs.maps;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -8,8 +9,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -48,16 +49,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap map) {
         mapReady = true;
         mGoogleMap = map;
-        mGoogleMap.addPolyline(new PolylineOptions().geodesic(true)
-                .add(renton)
-                .add(kirkland)
-                .add(everret)
-                .add(lynnwood)
-                .add(montlake)
-                .add(kent)
-                .add(showare)
-                .add(renton));
         flyTo(SEATTLE);
+        mGoogleMap.addCircle(new CircleOptions()
+                .center(renton)
+                .radius(5000)
+                .strokeColor(Color.GREEN)
+                .fillColor(Color.argb(64, 0, 255, 0)));
     }
 
 }
